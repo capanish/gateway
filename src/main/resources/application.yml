@@ -1,0 +1,45 @@
+server:
+  port: 8085
+  
+spring:
+  application:
+    name: zuulserver
+    
+zuul:
+  prefix: /api
+  routes:
+    provision-service:
+      path: /micro2/**
+      #url: http://localhost:8082/adif/
+      serviceId: provision-service
+    cont-service:
+      path: /micro1/**
+      #url: http://localhost:8081/adif/
+      serviceId: cont-service
+    cert-service:
+      path: /micro3/**
+      #url: http://localhost:8080/adif/
+      serviceId: cert-service
+    
+endpoints:
+  routes:
+    sensitive: false
+  trace:
+    sensitive: false
+    
+eureka:
+  client:
+    service-url:
+      default-zone: http://circuit-breaker.adifv2.svc:8761/eureka/
+
+
+
+
+
+
+
+
+
+
+
+
