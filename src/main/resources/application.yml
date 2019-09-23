@@ -31,6 +31,7 @@ eureka:
   instance:
     port: 8761
     
+    
 eureka:
   instance:
     hostname: circuit-breaker.adifv2.svc
