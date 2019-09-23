@@ -11,15 +11,15 @@ zuul:
     provision-service:
       path: /micro2/**
       url: http://prov-service-adifv2.apps.okd.openshifthub.ml/adif/
-      #serviceId: provision-service
+      serviceId: provision-service
     cont-service:
       path: /micro1/**
       url: http://cont-service-adifv2.apps.okd.openshifthub.ml/adif/
-      #serviceId: cont-service
+      serviceId: cont-service
     cert-service:
       path: /micro3/**
       url: http://cert-service-adifv2.apps.okd.openshifthub.ml/adif/
-      #serviceId: cert-service
+      serviceId: cert-service
     
 endpoints:
   routes:
