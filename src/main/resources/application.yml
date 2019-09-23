@@ -27,10 +27,7 @@ endpoints:
   trace:
     sensitive: false
     
-eureka:
-  client:
-    service-url:
-      default-zone: http://circuit-breaker.adifv2.svc:8761/eureka/
+
 
 
 
