@@ -26,20 +26,12 @@ endpoints:
     sensitive: false
   trace:
     sensitive: false
-    
-eureka:
-  instance:
-    port: 8761
-    
-    
-eureka:
-  instance:
-    hostname: circuit-breaker.adifv2.svc
+     
    
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+      defaultZone: http://circuit-breaker.adifv2.svc:8761/eureka/
     
 
 
