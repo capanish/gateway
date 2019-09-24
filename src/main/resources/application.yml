@@ -40,7 +40,7 @@ cont-service:
     
 cert-service: 
   ribbon:
-    listOfServers: http://cert-service-adifv2.apps.okd.openshifthub.ml/
+    listOfServers: http://cert-service.adifv2.svc:8080/
 
 endpoints:
   routes:
