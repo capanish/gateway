@@ -63,7 +63,7 @@ public class MyFallbackProvider  {
 
 		    	            @Override
 		    	            public InputStream getBody() throws IOException {
-		    	                return new ByteArrayInputStream("The requested service is not responding. Please try again in sometime.".getBytes());
+		    	                return new ByteArrayInputStream("El servicio no está disponible. Por favor, inténtelo más tarde.".getBytes());
 		    	            }
 
 		    	            @Override
