@@ -32,11 +32,11 @@ ribbon:
     
 provision-service: 
   ribbon:
-    listOfServers: http://prov-service-adifv2.apps.okd.openshifthub.ml/
+    listOfServers: http://prov-service.adifv2.svc:8082/
     
 cont-service: 
   ribbon:
-    listOfServers: http://cont-service-adifv2.apps.okd.openshifthub.ml/
+    listOfServers: http://cont-service.adifv2.svc:8081/
     
 cert-service: 
   ribbon:
