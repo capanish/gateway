@@ -1,48 +1,50 @@
 server:
   port: 8085
-  
-spring:
-  application:
-    name: zuulserver
-    
+
 zuul:
+  ignoredServices: '*'
   prefix: /api
   routes:
     provision-service:
-      path: /micro2/**
-      url: http://prov-service-adifv2.apps.okd.openshifthub.ml/
-      #serviceId: provision-service
+      path: /m2/**
+      serviceId: provision-service
+      strip-prefix: true
+      #url: http://localhost:8082/
     cont-service:
-      path: /micro1/**
-      url: http://cont-service-adifv2.apps.okd.openshifthub.ml/
-      #serviceId: cont-service
+      path: /m1/**
+      serviceId:  cont-service
+      strip-prefix: true
+      #url: http://localhost:8081/
     cert-service:
-      path: /micro3/**
-      url: http://cert-service-adifv2.apps.okd.openshifthub.ml/
-      #serviceId: cert-service
+      path: /m3/**
+      serviceId:  cert-service
+      strip-prefix: true
+      #url: http://localhost:8080/
+    zuulserver:
+      path: /gateway/**
+      serviceId:  zuulserver
+      strip-prefix: true
+      
+ribbon:
+  eureka:
+    enabled: false
     
+    
+provision-service: 
+  ribbon:
+    listOfServers: http://prov-service-adifv2.apps.okd.openshifthub.ml/
+    
+cont-service: 
+  ribbon:
+    listOfServers: http://cont-service-adifv2.apps.okd.openshifthub.ml/
+    
+cert-service: 
+  ribbon:
+    listOfServers: http://cert-service-adifv2.apps.okd.openshifthub.ml/
+
 endpoints:
   routes:
     sensitive: false
   trace:
     sensitive: false
-     
-   
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://circuit-breaker-adifv2.apps.okd.openshifthub.ml/
-    
-
-
-
-
-
-
-
-
-
-
-
-
 
