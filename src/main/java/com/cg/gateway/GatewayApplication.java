@@ -24,10 +24,7 @@ public class GatewayApplication {
 	      return new WebMvcConfigurerAdapter() {
 	         @Override
 	         public void addCorsMappings(CorsRegistry registry) {
-	            registry.addMapping("/**").allowedOrigins("http://userv-3-adifv2.apps.okd.openshifthub.ml")
-	            .allowCredentials(false)
-	            .allowedHeaders("Accept","Content-Type","Origin","Authorization","X-Auth-Token")
-	           .exposedHeaders("X-Auth-Token","Authorization");
+	            registry.addMapping("/**").allowedOrigins("*");
          }
 	      };
 	   }
