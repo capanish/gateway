@@ -19,13 +19,16 @@ public class GatewayApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(GatewayApplication.class, args);
 	}
-	 @Bean
+	  @Bean
 	   public WebMvcConfigurer corsConfigurer() {
 	      return new WebMvcConfigurerAdapter() {
 	         @Override
 	         public void addCorsMappings(CorsRegistry registry) {
-	            registry.addMapping("/**").allowedOrigins("*");
-	         }
+	            registry.addMapping("/**").allowedOrigins("*")
+	            .allowCredentials(false)
+	            .allowedHeaders("Accept","Content-Type","Origin","Authorization","X-Auth-Token")
+	           .exposedHeaders("X-Auth-Token","Authorization");
+         }
 	      };
 	   }
 	 
