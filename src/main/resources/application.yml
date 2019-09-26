@@ -32,11 +32,11 @@ ribbon:
     
 provision-service: 
   ribbon:
-    listOfServers: http://prov-service.adifv2.svc:8082/
+    listOfServers: http://provision-backend.adifv2.svc:8082/
     
 cont-service: 
   ribbon:
-    listOfServers: http://cont-service.adifv2.svc:8081/
+    listOfServers: http://contable-service.adifv2.svc:8081/
     
 cert-service: 
   ribbon:
