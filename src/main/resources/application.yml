@@ -32,7 +32,7 @@ ribbon:
     
 provision-service: 
   ribbon:
-    listOfServers: http://provision-backend.adifv2.svc:8082/
+    listOfServers: http://provision-service.adifv2.svc:8082/
     
 cont-service: 
   ribbon:
