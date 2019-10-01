@@ -24,7 +24,7 @@ public class GatewayApplication {
 	      return new WebMvcConfigurerAdapter() {
 	         @Override
 	         public void addCorsMappings(CorsRegistry registry) {
-	            registry.addMapping("/api/m3*").allowedOrigins("*");
+	            registry.addMapping("/api/m3/websocket/**").allowedOrigins("*");
          }
 	      };
 	   }
