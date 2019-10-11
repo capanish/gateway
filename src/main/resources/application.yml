@@ -34,8 +34,8 @@ provision-service:
   ribbon:
     NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
     listOfServers: http://provision-service.adifv2.svc:8082/
-    ConnectTimeout: 1000
-    ReadTimeout: 3000
+    ConnectTimeout: 20
+    ReadTimeout: 20
     MaxTotalHttpConnections: 500
     MaxConnectionsPerHost: 100
     
@@ -43,8 +43,8 @@ cont-service:
   ribbon:
     NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
     listOfServers: http://contable-service.adifv2.svc:8081/
-    ConnectTimeout: 1000
-    ReadTimeout: 3000
+    ConnectTimeout: 20
+    ReadTimeout: 20
     MaxTotalHttpConnections: 500
     MaxConnectionsPerHost: 100
     
@@ -52,8 +52,8 @@ cert-service:
   ribbon:
     NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
     listOfServers: http://cert-service.adifv2.svc:8080/
-    ConnectTimeout: 1000
-    ReadTimeout: 3000
+    ConnectTimeout: 20
+    ReadTimeout: 20
     MaxTotalHttpConnections: 500
     MaxConnectionsPerHost: 100
 
